@@ -152,10 +152,11 @@ class _SelectedListingCard extends StatelessWidget {
                 color: AppTheme.secondaryDark,
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Center(
-                child: Text(
-                  _emoji(listing.category),
-                  style: const TextStyle(fontSize: 24),
+              child: const Center(
+                child: Icon(
+                  Icons.location_on,
+                  color: AppTheme.accentGold,
+                  size: 26,
                 ),
               ),
             ),
@@ -195,16 +196,5 @@ class _SelectedListingCard extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  String _emoji(String cat) {
-    const m = {
-      'Café': '☕', 'Restaurant': '🍽️', 'Hospital': '🏥',
-      'Police Station': '🚔', 'Library': '📚', 'Park': '🌳',
-      'Tourist Attraction': '🏛️', 'Pharmacy': '💊', 'Bank': '🏦',
-      'Supermarket': '🛒', 'Hotel': '🏨', 'Gym': '💪',
-      'School': '🎓', 'Utility Office': '🏢',
-    };
-    return m[cat] ?? '📍';
   }
 }
